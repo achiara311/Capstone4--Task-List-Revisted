@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewData["Title"] = "ListOfTasks";
+}
+@model IEnumerable<TaskListCaptsone6.Models.Tasks>
+
+
+<p>
+    <h2> Here are tasks!</h2>
+</p>
+<table class="table">
+    <tr>
+
+        <th>
+            Description
+        </th>
+        <th>
+            DueDate
+        </th>
+        <th>
+            Complete
+        </th>
+    </tr>
+
+    @foreach (var task in Model)
+    {
+        <tr>
+            <td>
+                @task.TaskDescription
+            </td>
+        
+        
+            <td>
+                @task.DueDate.
+            </td>
+        
+        
+            <td>
+                @task.Complete
+            </td>
+        
+        <td><a href="/Home/UpdateTasks?Id=@task.TasksId"><input type="submit" value="Update" class="btn-block"/></a></td>
+            </tr>
+    }
+
+
+
+</table>
+
+
+
+
